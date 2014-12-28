@@ -1,8 +1,13 @@
 // Our Twitter library
 var Twit = require('twit');
 
-// If connecting to Twitter you'll need to add your info to the config file
-var T = new Twit(require('./config.js'));
+// If connecting to Twitter you'll need to uncomment this and add your info
+// var T = new Twit({
+//     consumer_key:         '',
+//     consumer_secret:      '',
+//     access_token:         '',
+//     access_token_secret:  ''
+// });
 
 // Our base statement (= a container to hold the final statement)
 var statement = "";
