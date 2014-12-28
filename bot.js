@@ -41,6 +41,11 @@ function makeVergil() {
                         statement = latin + '/ ' + english;
                         console.log('book ' + book_counter + ', line ' + line_counter);
                         console.log(statement);
+                        // T.post('statuses/update', { status: exclamation},
+                        //     function(err, reply) {
+                        //         console.log("error: " + err);
+                        //         console.log("reply: " + reply);
+                        // });
   		        });
             }
             else {
