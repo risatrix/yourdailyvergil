@@ -16,7 +16,15 @@ var latin = "";
 
 function makeVergil() {
     line_counter += 1;
-    book_counter +=1;
+    // There are only 12 books in the Aeneid
+    if (book_counter <= 11) {
+        book_counter +=1;
+    }
+    else {
+        //reset entirely if we get past the last book
+        book_counter = 1;
+        line_counter = 1;
+    }
     getLatinURL = LatinURLBase + '/' + book_counter + '/' + line_counter;
     getEnglishURL = EnglishURLBase + '/' + book_counter + '/' + line_counter;
 	request(getLatinURL,
@@ -33,6 +41,7 @@ function makeVergil() {
                 // console.log(english);
             }
         statement = latin + '/ ' + english;
+        console.log('book ' + book_counter + ', line ' + line_counter);
         console.log(statement);
         });
     });
