@@ -4,10 +4,80 @@ Uses the newly created [Aeneid API](http://aeneid.eu/api/)
 to Tweet a line of Vergil's Latin, plus translation, about every hour.
 The goal is to Tweet the whole of the Aeneid in a year, for 2015.
 
+Also meant to be a [learning tool](https://github.com/risatrix/yourdailyvergil#tutorialish-suggestions)
+for humanists who want to program.
+
 Adapted from Darius Kazemi's [ExampleBot](https://github.com/dariusk/examplebot),
 with some features from his [MetaphorAMinute](https://github.com/dariusk/metaphor-a-minute) Bot.
 
-#Tutorial(ish) Suggestions
+##How to Run VergilBot Locally
+
+Even if you don't want to connect to Twitter, you can run this as-is and see the output
+locally in your computer's console.
+
+_Note: you must be comfortable using your computer's command line interface to use this bot.
+If you've never used it, there are tutorials for [Mac OSX](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)
+and [Windows](http://www.bleepingcomputer.com/tutorials/windows-command-prompt-introduction/)._
+
+If you don't already have have them, please install [Node.js](http://nodejs.org/).
+This will install two programs: `node`, which runs JavaScript from the command line,
+and `npm`, which helps you install software that Node.js can run.
+
+Make an empty project directory somewhere convenient for you,
+[download this file](https://github.com/risatrix/yourdailyvergil/archive/master.zip),
+and unzip the contents to your project directory. Go to your project directory in the command line
+(the command in this case is `cd`). There should be four files there: `.gitignore`, `README.md`, `bot.js`, and `package.json`.
+In that directory type:
+
+`npm install twit`
+`npm install request`
+
+This installs some code to the `npm_modules` subdirectory, which you don't need to worry about.
+(It's Twit, the library that lets us talk to Twitter, and Request, the library that lets us make
+calls the the Aeneid API.)
+
+Once this is done, you should be able to run `node bot.js` in the Terminal.
+If all goes well, you'll see the Aeneid begin running through your terminal window.
+
+##Connecting to Twitter
+
+At this point you need to register a Twitter account and also get its "app info".
+
+So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I recommend you create a brand new email address (perhaps using Gmail) for the Twitter account. Once you register the account to that email address, wait for the confirmation email.
+You'll then need to add a phone number to be able to post to Twitter remotely. Hint: use a
+Google phone number if it recognizes your real one.
+
+Then go here and log in as the Twitter account for your bot:
+
+https://dev.twitter.com/apps/new
+
+Once you're there, fill in the required fields: name, description, website. None of it really matters at all to your actual app, it's just for Twitter's information. Do the captcha and submit.
+
+Next you'll see a screen with a "Details" tab. Click on the "Settings" tab and under "Application Type" choose "Read and Write", then hit the update button at the bottom.
+
+Then go back to the Details tab, and at the bottom click "create my access token". Nothing might happen immediately. Wait a minute and reload the page. then there should be "access token" and "access token secret", which are both long strings of letters and numbers.
+
+Now use a text editor to open up the "bot.js" file. You should see something like this
+
+// var T = new Twit({
+// consumer_key: '',
+// consumer_secret: '',
+// access_token: '',
+// access_token_secret: ''
+/
+
+First, you'll need to uncomment that area.
+In between those quotes, instead of `''`, paste the appropriate info from the Details page. This is essentially the login information for the app.
+Finally, you need to uncomment the twitter code itself, which is the function under ` // Tweets the Tweet`.
+
+
+Now if you type the following in the command line in your project directory:
+
+`node bot.js`
+
+You should be able to see a Tweet.
+
+#Tutorial(ish) Suggestions for the Innocent and Doomed
 
 If you're a humanist who wants to program, it can be hard to find projects
 that speak to your interests. I thought this could serve as a good example
