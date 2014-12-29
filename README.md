@@ -4,7 +4,7 @@ Uses the newly created [Aeneid API](http://aeneid.eu/api/)
 to Tweet a line of Vergil's Latin, plus translation, about every hour.
 The goal is to Tweet the whole of the Aeneid in a year, for 2015.
 
-Also meant to be a [learning tool](https://github.com/risatrix/yourdailyvergil#tutorialish-suggestions)
+Also meant to be a [learning tool](https://github.com/risatrix/yourdailyvergil#tutorialish-suggestions-for-the-innocent-and-doomed)
 for humanists who want to program.
 
 Adapted from Darius Kazemi's [ExampleBot](https://github.com/dariusk/examplebot),
