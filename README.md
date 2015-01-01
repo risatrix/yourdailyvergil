@@ -26,13 +26,17 @@ and `npm`, which helps you install software that Node.js can run.
 Make an empty project directory somewhere convenient for you,
 [download this file](https://github.com/risatrix/yourdailyvergil/archive/master.zip),
 and unzip the contents to your project directory. Go to your project directory in the command line
-(the command in this case is `cd`). There should be four files there: `.gitignore`, `README.md`, `bot.js`, and `package.json`.
+(the command in this case is `cd`). There should be three files there: `.gitignore`, `README.md`, and `bot.js`.
+
 In that directory type:
 
 `npm install twit`
+
+then:
+
 `npm install request`
 
-This installs some code to the `npm_modules` subdirectory, which you don't need to worry about.
+This installs some code to the `node_modules` subdirectory, which you don't need to worry about.
 (It's Twit, the library that lets us talk to Twitter, and Request, the library that lets us make
 calls the the Aeneid API.)
 
