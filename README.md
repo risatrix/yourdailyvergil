@@ -7,7 +7,7 @@ The goal is to Tweet the whole of the Aeneid in a year, for 2015.
 Also meant to be a [learning tool](https://github.com/risatrix/yourdailyvergil#tutorialish-suggestions-for-the-innocent-and-doomed)
 for humanists who want to program.
 
-Adapted from Darius Kazemi's [ExampleBot](https://github.com/dariusk/examplebot),
+Forked from Darius Kazemi's [ExampleBot](https://github.com/dariusk/examplebot),
 with some features from his [MetaphorAMinute](https://github.com/dariusk/metaphor-a-minute) Bot.
 
 ##How to Run VergilBot Locally
@@ -88,7 +88,7 @@ I've commented the bot.js file extensively, if you're interested.
 And you don't have to build a Twitterbot; doing anything with the Aeneid API
 is a good place to start. The API itself is public and very simple.
 Accessing it will give you experience with [APIs](http://skillcrush.com/2012/07/04/api-2/)
- and [getting info from them](http://themarklee.com/2014/04/03/pulling-json-data-open-data-api/);
+ and [getting info from them](http://www.smashingmagazine.com/2012/02/09/beginners-guide-jquery-based-json-api-clients/);
  understanding [web page headers](http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039);
 loops; and even some error handling.
 

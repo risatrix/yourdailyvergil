@@ -1,13 +1,8 @@
 // Our Twitter library
 var Twit = require('twit');
 
-// If connecting to Twitter you'll need to uncomment this and add your info
-// var T = new Twit({
-//     consumer_key:         '',
-//     consumer_secret:      '',
-//     access_token:         '',
-//     access_token_secret:  ''
-// });
+// We need to include our configuration file
+var T = new Twit(require('./config.js'));
 
 // Our base statement (= a container to hold the final statement)
 var statement = "";
@@ -53,11 +48,10 @@ function makeVergilTweet() {
                             console.log('Status Code: ' + response.statusCode);
                         }
                         // builds the Tweet
-                        statement = latin + '/ ' + english;
-                        console.log('book ' + book_counter + ', line ' + line_counter);
+                        statement = latin + '\n' + english + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
                         console.log(statement);
-                        // Tweets the Tweet
-                        // T.post('statuses/update', { status: exclamation},
+                        //Tweets the Tweet
+                        // T.post('statuses/update', { status: statement},
                         //     function(err, reply) {
                         //         console.log("error: " + err);
                         //         console.log("reply: " + reply);
