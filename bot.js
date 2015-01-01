@@ -51,11 +51,11 @@ function makeVergilTweet() {
                         statement = latin + '\n' + english + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
                         console.log(statement);
                         //Tweets the Tweet
-                        // T.post('statuses/update', { status: statement},
-                        //     function(err, reply) {
-                        //         console.log("error: " + err);
-                        //         console.log("reply: " + reply);
-                        // });
+                        T.post('statuses/update', { status: statement},
+                            function(err, reply) {
+                                console.log("error: " + err);
+                                console.log("reply: " + reply);
+                        });
   		        });
             }
             // if the header returns anything other than 200 (=okay),
