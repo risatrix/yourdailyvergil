@@ -12,7 +12,7 @@ with some features from his [MetaphorAMinute](https://github.com/dariusk/metapho
 
 ##How to Run VergilBot Locally
 
-Even if you don't want to connect to Twitter, you can run this as-is and see the output
+Even if you don't want to connect to Twitter, you can run this with one line commented out, and see the output
 locally in your computer's console.
 
 _Note: you must be comfortable using your computer's command line interface to use this bot.
@@ -88,11 +88,11 @@ You should be see a Vergil Tweet appear in the account.
 If you're a humanist who wants to program, it can be hard to find projects
 that speak to your interests. I thought this could serve as a good example
 of something that combines core programming concepts with subject matter that's
-of interest (and not just the Latin -- the API provides [three separate translations](http://api.aeneid.eu/versions).)
+of interest (and not just the Latin -- the API provides [three separate English translations](http://api.aeneid.eu/versions).)
 
-I've commented the bot.js file extensively, if you're interested.
-And you don't have to build a Twitterbot; doing anything with the Aeneid API
-is a good place to start programming. The API itself is public and very simple.
+I've commented the `bot.js` file extensively, if you want to read through what it's
+doing. And you don't have to build a Twitterbot; doing anything with the Aeneid API
+is a good place to start programming. The Aeneid API itself is public and very simple.
 Accessing it will give you experience with [APIs](http://skillcrush.com/2012/07/04/api-2/)
  and [getting info from them](http://www.smashingmagazine.com/2012/02/09/beginners-guide-jquery-based-json-api-clients/);
  understanding [web page headers](http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039);
@@ -100,7 +100,7 @@ loops; and even some error handling.
 
 A big part of programming is breaking down large tasks into smaller ones,
 and iterating on an idea to make it progressively better. While building this,
-I used roughly the following steps:
+I used roughly the following steps (as you can see in the commit history):
 
 1. Grab the first line of every book from the API using a self-incrementing loop,
 and output them into the Terminal console.
@@ -111,7 +111,7 @@ as a trigger for the 'start a new book' functionality.
 5. Grab the English translation for a successfully retreived Latin phrase,
 and add it to the output.
 6. Make the ultimate output a Tweet. Note that you can program the rest
-of the functionality without having to worry about that part, or any output.
+of the functionality without having to worry about that part.
 
 I used Node (a kind of Javascript), but the first five tasks can be accomplished
 in any programming language -- making the input show up in the console means you don't have to futz with HTML.

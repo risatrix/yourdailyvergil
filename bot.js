@@ -36,6 +36,7 @@ function makeVergilTweet() {
                 var data = JSON.parse(body);
                 latin = (data.text);
                 // we only request the English URL if the Latin returned okay
+                // (status code 200 means okay)
                 request(getEnglishURL,
                     function (error, response, body) {
                         if (!error && response.statusCode == 200) {
@@ -58,7 +59,7 @@ function makeVergilTweet() {
                         });
   		        });
             }
-            // if the header returns anything other than 200 (=okay),
+            // if the header returns anything other than 200,
             // we won't build anything.
             else {
                 // Print out the status and error message so we know what's going on.
