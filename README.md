@@ -2,7 +2,7 @@
 
 Uses the newly created [Aeneid API](http://aeneid.eu/api/)
 to Tweet a line of Vergil's Latin, plus translation, about every hour.
-The goal is to Tweet the whole of the Aeneid in a year, for 2015.
+The goal is to Tweet the whole of the _Aeneid_ in a year, for 2015.
 
 Also meant to be a [learning tool](https://github.com/risatrix/yourdailyvergil#tutorialish-suggestions-for-the-innocent-and-doomed)
 for humanists who want to program.
@@ -36,12 +36,16 @@ This installs some code to the `npm_modules` subdirectory, which you don't need 
 (It's Twit, the library that lets us talk to Twitter, and Request, the library that lets us make
 calls the the Aeneid API.)
 
+If you're not connecting to Twitter, comment out the `bot.js` line that reads:
+`var T = new Twit(require('./config.js'));` by putting a `//` in front of it.
+(Otherwise the server will freak out when it tries to look for a missing file.)
+
 Once this is done, you should be able to run `node bot.js` in the Terminal.
 If all goes well, you'll see the Aeneid begin running through your terminal window.
 
 ##Connecting to Twitter
 
-At this point you need to register a Twitter account and also get its "app info".
+To connect to Twitter you need to register a Twitter account and also get its "app info".
 
 So create a Twitter account for whatever account you want to tweet this stuff. Twitter doesn't allow you to register multiple twitter accounts on the same email address. I recommend you create a brand new email address (perhaps using Gmail) for the Twitter account. Once you register the account to that email address, wait for the confirmation email.
 You'll then need to add a phone number to be able to post to Twitter remotely. Hint: use a
@@ -57,36 +61,38 @@ Next you'll see a screen with a "Details" tab. Click on the "Settings" tab and u
 
 Then go back to the Details tab, and at the bottom click "create my access token". Nothing might happen immediately. Wait a minute and reload the page. then there should be "access token" and "access token secret", which are both long strings of letters and numbers.
 
-Now use a text editor to open up the "bot.js" file. You should see something like this
+Now you'll need to add your own `config.js` file. You can do this in your text editor.
 
-// var T = new Twit({
-// consumer_key: '',
-// consumer_secret: '',
-// access_token: '',
-// access_token_secret: ''
-/
+It will need to look like this:
 
-First, you'll need to uncomment that area.
-In between those quotes, instead of `''`, paste the appropriate info from the Details page. This is essentially the login information for the app.
-Finally, you need to uncomment the twitter code itself, which is the function under ` // Tweets the Tweet`.
+```javascript
+module.exports = {
+  consumer_key:               'YOUR_AUTH_STUFF_HERE',
+  consumer_secret:            'YOUR_AUTH_STUFF_HERE',
+  access_token:               'YOUR_AUTH_STUFF_HERE',
+  access_token_secret:        'YOUR_AUTH_STUFF_HERE',
+};
+```
 
+
+In between those quotes, instead of `'YOUR_AUTH_STUFF_HERE'`, paste the appropriate info from your app's Details page. This is essentially the login information for the app.
 
 Now if you type the following in the command line in your project directory:
 
 `node bot.js`
 
-You should be able to see a Tweet.
+You should be see a Vergil Tweet appear in the account.
 
 #Tutorial(ish) Suggestions for the Innocent and Doomed
 
 If you're a humanist who wants to program, it can be hard to find projects
 that speak to your interests. I thought this could serve as a good example
 of something that combines core programming concepts with subject matter that's
-of interest.
+of interest (and not just the Latin -- the API provides [three separate translations](http://api.aeneid.eu/versions).)
 
 I've commented the bot.js file extensively, if you're interested.
 And you don't have to build a Twitterbot; doing anything with the Aeneid API
-is a good place to start. The API itself is public and very simple.
+is a good place to start programming. The API itself is public and very simple.
 Accessing it will give you experience with [APIs](http://skillcrush.com/2012/07/04/api-2/)
  and [getting info from them](http://www.smashingmagazine.com/2012/02/09/beginners-guide-jquery-based-json-api-clients/);
  understanding [web page headers](http://code.tutsplus.com/tutorials/http-headers-for-dummies--net-8039);
