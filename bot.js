@@ -1,3 +1,5 @@
+var request = require('request');
+
 // Our Twitter library
 var Twit = require('twit');
 
@@ -13,7 +15,7 @@ var latin = "";
 // Base URLs to hit the Aeneid API
 // The book and line numbers will be added automatically via loop
 var LatinURLBase = "http://api.aeneid.eu/versions/latin/";
-var EnglishURLBase = "http://api.aeneid.eu/versions/dryden/";
+var EnglishURLBase = "http://api.aeneid.eu/versions/morris/";
 
 // counters to keep track of book and line numbers
 var book_counter = 1;
@@ -51,7 +53,7 @@ function makeVergilTweet() {
                         // builds the Tweet
                         statement = latin + '\n' + english + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
                         console.log(statement);
-                        //Tweets the Tweet
+                        Tweets the Tweet
                         T.post('statuses/update', { status: statement},
                             function(err, reply) {
                                 console.log("error: " + err);
