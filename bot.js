@@ -53,7 +53,7 @@ function makeVergilTweet() {
                         // builds the Tweet
                         statement = latin + '\n' + english + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
                         console.log(statement);
-                        Tweets the Tweet
+                        //Tweets the Tweet
                         T.post('statuses/update', { status: statement},
                             function(err, reply) {
                                 console.log("error: " + err);
