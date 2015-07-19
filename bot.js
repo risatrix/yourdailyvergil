@@ -18,8 +18,8 @@ var LatinURLBase = "http://api.aeneid.eu/versions/latin/";
 var EnglishURLBase = "http://api.aeneid.eu/versions/morris/";
 
 // counters to keep track of book and line numbers
-var book_counter = 1;
-var line_counter = 0;
+var book_counter = 3;
+var line_counter = 470;
 
 function makeVergilTweet() {
     // increment the line number
@@ -51,7 +51,8 @@ function makeVergilTweet() {
                             console.log('Status Code: ' + response.statusCode);
                         }
                         // builds the Tweet
-                        statement = latin + '\n' + english + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
+                        // statement = latin + '\n' + english + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
+                        statement = latin + '\n' + 'Book '+ book_counter + ', line ' + line_counter;
                         console.log(statement);
                         //Tweets the Tweet
                         T.post('statuses/update', { status: statement},
