@@ -1,0 +1,25 @@
+{
+  "name": "yourdailyvergil",
+  "version": "1.0.0",
+  "description": "a bot that tweets Vergil's Aeneid",
+  "main": "bot.js",
+  "dependencies": {
+    "forever": "^0.15.3",
+    "require": "^2.4.20",
+    "twit": "^2.2.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/risatrix/yourdailyvergil.git"
+  },
+  "author": "Amanda Krauss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/risatrix/yourdailyvergil/issues"
+  },
+  "homepage": "https://github.com/risatrix/yourdailyvergil#readme"
+}
