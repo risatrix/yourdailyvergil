@@ -18,8 +18,8 @@ var LatinURLBase = "http://api.aeneid.eu/versions/latin/";
 var EnglishURLBase = "http://api.aeneid.eu/versions/morris/";
 
 // counters to keep track of book and line numbers
-var book_counter = 3;
-var line_counter = 470;
+var book_counter = 6;
+var line_counter = 318;
 
 function makeVergilTweet() {
     // increment the line number
