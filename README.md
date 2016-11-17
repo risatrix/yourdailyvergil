@@ -87,6 +87,13 @@ Now if you type the following in the command line in your project directory:
 
 You should be see a Vergil Tweet appear in the account.
 
+##How to Run VergilBot From a Server
+I can't give you every step here, but you'll have to upload the code to a service that lets you run Node apps (such as Heroku as AWS), install the dependencies, then start the bot. I've included forever as a dependency, so you can use
+
+`forever start bot.js`
+
+to keep it running.
+
 #Tutorial(ish) Suggestions for the Innocent and Doomed
 
 If you're a humanist who wants to program, it can be hard to find projects
