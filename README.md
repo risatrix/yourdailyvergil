@@ -1,8 +1,12 @@
-#YourDailyVergil Bot
+# YourDailyVergil Bot
 
-Uses the newly created [Aeneid API](http://aeneid.eu/api/)
+Note: this is an archived project. The bot [finished its task](https://twitter.com/YourDailyVergil/status/871395088068366336) of Tweeting the *Aeneid* in 2017, and I [rewrote it in Python](https://github.com/risatrix/dailyowl) to make amusing Vergil-based owl tweets.
+
+Uses the [Aeneid API](http://aeneid.eu/api/)
 to Tweet a line of Vergil's Latin, plus translation, about every hour.
 The goal is to Tweet the whole of the _Aeneid_ in a year, for 2015.
+
+(*Ed. note: due to using AWS's prepackaged Node image, it kept stopping and actually took till mid-2017. Oh well, that's software development for ya.*)
 
 Also meant to be a [learning tool](https://github.com/risatrix/yourdailyvergil#tutorialish-suggestions-for-the-innocent-and-doomed)
 for humanists who want to program.
@@ -10,7 +14,7 @@ for humanists who want to program.
 Forked from Darius Kazemi's [ExampleBot](https://github.com/dariusk/examplebot),
 with some features from his [MetaphorAMinute](https://github.com/dariusk/metaphor-a-minute) Bot.
 
-##How to Run VergilBot Locally
+## How to Run VergilBot Locally
 
 Even if you don't want to connect to Twitter, you can run this with one line commented out, and see the output
 locally in your computer's console.
@@ -47,7 +51,7 @@ If you're not connecting to Twitter, comment out the `bot.js` line that reads:
 Once this is done, you should be able to run `node bot.js` in the Terminal.
 If all goes well, you'll see the Aeneid begin running through your terminal window.
 
-##Connecting to Twitter
+## Connecting to Twitter
 
 To connect to Twitter you need to register a Twitter account and also get its "app info".
 
@@ -94,7 +98,7 @@ I can't give you every step here, but you'll have to upload the code to a servic
 
 to keep it running.
 
-#Tutorial(ish) Suggestions for the Innocent and Doomed
+# Tutorial(ish) Suggestions for the Innocent and Doomed
 
 If you're a humanist who wants to program, it can be hard to find projects
 that speak to your interests. I thought this could serve as a good example
